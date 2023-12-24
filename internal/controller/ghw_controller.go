@@ -18,6 +18,7 @@ package controller
 
 import (
 	"context"
+	"github.com/pixelsoccupied/ghw-operator/internal/pkg"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -49,7 +50,7 @@ type GhwReconciler struct {
 func (r *GhwReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	_ = log.FromContext(ctx)
 
-	// TODO(user): your logic here
+	log.Log.Info(pkg.GetTotalDiskSize())
 
 	return ctrl.Result{}, nil
 }
