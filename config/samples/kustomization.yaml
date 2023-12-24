@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- hwinfo_v1alpha1_ghw.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

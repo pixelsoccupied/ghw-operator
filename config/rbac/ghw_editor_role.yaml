@@ -1,0 +1,31 @@
+# permissions for end users to edit ghws.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: ghw-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: ghw-operator
+    app.kubernetes.io/part-of: ghw-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: ghw-editor-role
+rules:
+- apiGroups:
+  - hwinfo.vurt.inc
+  resources:
+  - ghws
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - hwinfo.vurt.inc
+  resources:
+  - ghws/status
+  verbs:
+  - get

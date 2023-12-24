@@ -1,0 +1,12 @@
+apiVersion: hwinfo.vurt.inc/v1alpha1
+kind: Ghw
+metadata:
+  labels:
+    app.kubernetes.io/name: ghw
+    app.kubernetes.io/instance: ghw-sample
+    app.kubernetes.io/part-of: ghw-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: ghw-operator
+  name: ghw-sample
+spec:
+  # TODO(user): Add fields here
